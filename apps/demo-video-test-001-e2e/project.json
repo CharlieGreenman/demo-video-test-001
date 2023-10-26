@@ -1,0 +1,29 @@
+{
+  "name": "demo-video-test-001-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/demo-video-test-001-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/demo-video-test-001-e2e/cypress.json",
+        "devServerTarget": "demo-video-test-001:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "demo-video-test-001:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/demo-video-test-001-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["demo-video-test-001"]
+}
