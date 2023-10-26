@@ -38,6 +38,9 @@
       ],
       "@demo-video-test-001/data-services": [
         "libs/data-services/src/index.ts"
+      ],
+      "@demo-video-test-001/data-graphql": [
+        "libs/data-graphql/src/index.ts"
       ]
     }
   },
